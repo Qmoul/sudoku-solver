@@ -22,4 +22,17 @@ public class SudokuUtils {
         }
         return array;
     }
+
+    public static String toSudokuString(int[][] input){
+        StringBuilder builder = new StringBuilder();
+        String result = "";
+        for (int i = 0; i < BOARD_SIZE; i++){
+            for (int j = 0; j < BOARD_SIZE; j++){
+                builder.append(input[i][j]).append(" ");
+            }
+            if (i!=8) builder.append("| ");
+            result = builder.toString();
+        }
+        return result.trim();
+    }
 }
