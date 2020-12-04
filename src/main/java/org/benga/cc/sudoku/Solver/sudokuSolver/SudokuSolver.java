@@ -5,13 +5,13 @@ public class SudokuSolver {
     private int[][] solvedMatrix;
     private boolean finished = false;
 
-    public void Solver(){}
+    public void SudokuSolver(){}
 
     public void setUnsolvedMatrix(int[][] unsolvedMatrix){
         this.unsolvedMatrix = unsolvedMatrix;
     }
 
-    public void Solver(int[][] unsolvedMatrix){
+    public void SudokuSolver(int[][] unsolvedMatrix){
         this.unsolvedMatrix = unsolvedMatrix;
         for (int i = 0; i < 9; i++){
             for (int j = 0; i < 9; j++){
@@ -35,8 +35,12 @@ public class SudokuSolver {
         }
     return false;
     }
-    public boolean validator(){
-
+    public boolean isValid(int indexX, int indexY, int value, int[][] unsolvedMatrix){
+        for (int i = 0; i < 9; i++){
+          if(unsolvedMatrix[indexX][i] == value){return false;}
+          if(unsolvedMatrix[i][indexY] == value){return false;}
+          if(unsolvedMatrix)
+        }
         return true;
     }
 }
